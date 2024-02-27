@@ -26,5 +26,5 @@ Rails.application.routes.draw do
   # post 'lists'
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "lists#index"
 end
