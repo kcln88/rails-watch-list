@@ -9,7 +9,13 @@ Rails.application.routes.draw do
 
   resources :lists do
     resources :bookmarks, only: [:index, :new, :create]
+    resources :movies do
+      resources :bookmarks, only: [:destroy]
+    end
   end
+
+  resources :bookmarks, only: [:destroy]
+
 
   # get 'lists/:id/bookmarks/new', to: 'bookmarks#new'
   # post 'lists/:id/bookmarks', to: 'bookmark#create'
